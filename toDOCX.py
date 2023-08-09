@@ -10,7 +10,8 @@ def toDOCX():
     tables = doc.tables
     # 取第一个表格
     table = tables[0]
-    table.cell(1, 0).text=date_info()
+    table.cell(1, 0).text = date_info()
+    # table.cell(1, 0).text=date_info()
 
     # 侧行垂直居中
     table.cell(5,1).text=getDb(0)

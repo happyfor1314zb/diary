@@ -1,7 +1,7 @@
 import pyautogui,pyperclip,time,sys,datetime
 
 def click(img,fangfa="0"):
-    i=88
+    i=10
     while i > 0:
         location = pyautogui.locateCenterOnScreen(img, confidence=0.95)
         # print(location)
@@ -46,7 +46,9 @@ def send_to():
     pyperclip.copy(f"d:\\公司汇报\\日报\\{name}")
     time.sleep(1)
     pyautogui.hotkey("ctrl","v")
-    time.sleep(0.5)
+    time.sleep(2)
+    pyautogui.press("enter")
+    time.sleep(2)
     pyautogui.press("enter")
 if __name__ == '__main__':
     send_to()
