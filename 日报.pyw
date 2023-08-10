@@ -1,5 +1,4 @@
 from docx import Document
-import datetime,requests
 import requests
 import pyautogui,pyperclip,time,sys,datetime
 def date_info():
@@ -34,7 +33,7 @@ def getDb(day):
 
 def toDOCX():
     print("打开模板……")
-    doc = Document(r"D:\公司汇报\日报\d0.docx")
+    doc = Document(r"D:\B地块\04汇报\01日报\d0.docx")
 
     # 获取文档中的所有表格
     tables = doc.tables
@@ -47,7 +46,7 @@ def toDOCX():
     table.cell(6,1).text=getDb(1)
     # 保存,日月用0补齐8位长
     todayName = (datetime.date.today()).strftime('%Y%m%d')
-    doc.save(f"D:\\公司汇报\\日报\\{todayName}宜丰宝梁城张斌日报.docx")
+    doc.save(f"D:\\B地块\\04汇报\\01日报\\{todayName}宜丰宝梁城张斌日报.docx")
 
 
 def click(img,fangfa="0"):
@@ -83,7 +82,6 @@ def send_to():
     pyautogui.hotkey("win","up")
     click("img/2sousuo.png")
     pyperclip.copy("宝梁城日报协调群")
-    # pyperclip.copy("张斌")
     time.sleep(1)
     pyautogui.hotkey("ctrl","v")
     time.sleep(1)
@@ -94,15 +92,13 @@ def send_to():
     click("img/4fawenjian.png")
     tday =  (datetime.date.today()).strftime('%Y%m%d')
     name =f"{tday}宜丰宝梁城张斌日报.docx"
-    pyperclip.copy(f"d:\\公司汇报\\日报\\{name}")
+    pyperclip.copy(f"d:\\B地块\\04汇报\\01日报\\{name}")
     time.sleep(1)
     pyautogui.hotkey("ctrl","v")
-    time.sleep(2)
     pyautogui.press("enter")
-    time.sleep(2)
+    time.sleep(1)
     pyautogui.press("enter")
 
 if __name__ == '__main__':
     toDOCX()
     send_to()
-    # date_info()

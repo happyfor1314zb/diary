@@ -4,7 +4,7 @@ from getTQ import date_info
 from getDb import *
 
 def toDOCX():
-    doc = Document(r"D:\公司汇报\日报\d0.docx")
+    doc = Document(r"D:\B地块\04汇报\01日报\d0.docx")
 
     # 获取文档中的所有表格
     tables = doc.tables
@@ -18,6 +18,6 @@ def toDOCX():
     table.cell(6,1).text=getDb(1)
     # 保存,日月用0补齐8位长
     todayName = (datetime.date.today()).strftime('%Y%m%d')
-    doc.save(f"D:\\公司汇报\\日报\\{todayName}宜丰宝梁城张斌日报.docx")
+    doc.save(f"D:\\B地块\\04汇报\\01日报\\{todayName}宜丰宝梁城张斌日报.docx")
 if __name__ == '__main__':
     toDOCX()
