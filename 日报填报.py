@@ -42,7 +42,7 @@ def create_window():
 current_time = datetime.datetime.now().time()
 
 # 当前时间小于18:00时，程序启动1秒后自动退出
-if current_time.hour < 17:
+if current_time.hour < 18:
     time.sleep(1)
     exit()
 
