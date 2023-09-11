@@ -71,7 +71,7 @@ def click(img,fangfa="0"):
         time.sleep(1)
 
 def send_to():
-    pyautogui.hotkey("ctrl","s")
+    # pyautogui.hotkey("ctrl","s")
     # 启动钉钉
     pyautogui.hotkey("win","r")
     pyperclip.copy("C:\\Program Files (x86)\\DingDing\\DingtalkLauncher.exe")
