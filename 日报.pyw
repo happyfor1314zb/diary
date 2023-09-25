@@ -46,7 +46,7 @@ def toDOCX():
     table.cell(6,1).text=getDb(1)
     # 保存,日月用0补齐8位长
     todayName = (datetime.date.today()).strftime('%Y%m%d')
-    doc.save(f"D:\\01B地块\\04汇报\\01日报\\{todayName}宜丰宝梁城张斌日报.docx")
+    doc.save(f"D:\\01B地块\\04汇报\\01日报\\{todayName}宜丰宝梁城日报.docx")
 
 
 def click(img,fangfa="0"):
